@@ -1,23 +1,36 @@
-# maureenblack.github.io
+# Maureen Wepngong
 
-This is my CV. It has code, links, projects and far too much personality to fit
-comfortably inside a PDF.
+If you clicked through my CV and somehow ended up inspecting the source code, hi.
 
-Live at **[maureenblack.github.io](https://maureenblack.github.io/)**.
+This repo powers my online CV and professional profile:
 
-Static HTML and CSS. No framework, no build step, self-hosted fonts.
+**https://maureenblack.github.io**
 
-## The PDF is generated
+I’m a software engineer, founder of Giiyo Tech, Cardano standards and governance contributor, and co-author of CPS-0033.
 
-`assets/Maureen-Wepngong-CV.pdf` is rendered from `cv-print.html` — don't edit
-the PDF directly. After changing `cv-print.html`:
+## What's in here
 
-```sh
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless --disable-gpu --no-pdf-header-footer --virtual-time-budget=7000 \
-  --run-all-compositor-stages-before-draw \
-  --print-to-pdf="assets/Maureen-Wepngong-CV.pdf" "file://$PWD/cv-print.html"
-```
+A very simple static site built with:
 
-Keep it to two pages, and keep it in step with the site — the same roles and
-figures appear in both.
+- HTML
+- CSS
+- Vanilla JavaScript
+- GitHub Pages
+
+No framework. No complicated build pipeline. The CV already has enough going on.
+
+## Selected work
+
+The site includes some of the work I’m most proud of, including:
+
+- CPS-0033: DRep Voting Power Concentration
+- Cardano governance research
+- State of Cardano Governance Report
+- Giiyo Tech
+- Koki
+
+## Live site
+
+**https://maureenblack.github.io**
+
+If you came here looking for the actual CV, the website is much prettier than this README.
