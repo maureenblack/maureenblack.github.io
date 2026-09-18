@@ -18,7 +18,7 @@ const SITE_CONFIG = Object.freeze({
   googlePlay: "https://play.google.com/store/apps/details?id=com.giiyotech.koki",
   appStore: "https://apps.apple.com/app/id6772351386",
   portrait: "assets/maureen.jpg",
-  portraitIsPlaceholder: true,
+  portraitIsPlaceholder: false,
 });
 
 // Real hrefs in the HTML provide a complete, readable site without JavaScript.
@@ -35,14 +35,14 @@ document.querySelectorAll("[data-email-text]").forEach((element) => {
   element.textContent = SITE_CONFIG.email;
 });
 
-// The monogram beneath the image also covers a missing or unreadable portrait.
+// The monogram beneath the image covers a missing or unreadable portrait.
 const portrait = document.getElementById("portrait-image");
 if (portrait) {
   const showPortraitFallback = () => {
     portrait.hidden = true;
     const fallback = document.querySelector(".portrait-fallback");
     fallback.setAttribute("role", "img");
-    fallback.setAttribute("aria-label", "MW monogram — portrait forthcoming");
+    fallback.setAttribute("aria-label", "Maureen Wepngong");
     fallback.removeAttribute("aria-hidden");
   };
   portrait.addEventListener("error", showPortraitFallback);
