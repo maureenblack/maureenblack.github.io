@@ -125,11 +125,6 @@ h1 { font-size: clamp(4.4rem, 7.8vw, 7.4rem); line-height: .99; letter-spacing: 
 .standards-content strong { color: var(--ink); }
 .standards-content .review-note { padding-left: 1.1rem; margin-top: 1.4rem; border-left: 2px solid #dcb7c5; font-size: .9375rem; }
 .feature-links { display: flex; flex-wrap: wrap; gap: .8rem 2rem; margin-top: 1.5rem; }
-.governance-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.1rem; margin-top: 3.5rem; }
-.governance-item + .governance-item { border-left: 1px solid var(--line); padding-left: 2.1rem; }
-.governance-item .eyebrow { font-size: .75rem; letter-spacing: .085em; }
-.governance-item h3 { margin-block: .9rem .85rem; font-size: 1.7rem; }
-.governance-item p { font-size: 1rem; color: var(--muted); }
 
 /* Experience uses an editorial ledger rather than a wall of bullet points. */
 .experience .section-heading { margin-bottom: 3.5rem; }
@@ -146,24 +141,6 @@ h1 { font-size: clamp(4.4rem, 7.8vw, 7.4rem); line-height: .99; letter-spacing: 
 .experience-detail .work-detail { font-size: .75rem; line-height: 1.7; color: var(--brown); margin-top: 1rem; }
 
 /* Selected work: typography carries the covers; no invented product screenshots. */
-.work { background: #f6f0e9; border-block: 1px solid var(--line); }
-.work .section-heading { align-items: center; }
-.project { display: grid; grid-template-columns: 1fr 1.1fr; border: 1px solid var(--line); background: var(--cream); }
-.project + .project { margin-top: 2.5rem; }
-.project-cover { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(2rem, 3.5vw, 3rem); min-width: 0; }
-.koki-cover { background: var(--brown); color: var(--pink); }
-.koki-cover .eyebrow { color: var(--pink); }
-.koki-type { font: 400 clamp(6.5rem, 12vw, 12rem)/1 var(--serif); letter-spacing: -.085em; padding-block: 3rem; }
-.koki-type > span { color: var(--cream); }
-.koki-cover-bottom { display: flex; justify-content: space-between; gap: 2rem; align-items: end; padding-top: 1.75rem; border-top: 1px solid rgb(255 224 238 / 40%); }
-.koki-cover-bottom p { font: 400 1.7rem/1.2 var(--serif); color: var(--cream); letter-spacing: -.02em; }
-.cover-caption { font-size: .75rem; line-height: 1.7; }
-.project-content { padding: clamp(2rem, 3.5vw, 3rem); }
-.project-content > .eyebrow { font-size: .75rem; letter-spacing: .07em; }
-.project-content h3 { font-size: clamp(2rem, 2.8vw, 2.65rem); margin-block: 1.25rem; }
-.project-content > p:not(.eyebrow) { font-size: 1rem; color: var(--muted); }
-.project-content .project-stack { margin-top: 1.5rem; color: var(--brown); font-size: .75rem; font-weight: 500; }
-.project-stack span { margin-inline: .5rem; color: var(--muted); }
 .store-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
 .store-button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; flex: 1 1 10.5rem; min-height: 3.8rem; padding: .6rem .9rem; border: 1px solid var(--brown); border-radius: 4px; color: var(--brown); text-decoration: none; transition: background .2s, color .2s; }
 .store-button small, .store-button strong { display: block; }
@@ -171,28 +148,8 @@ h1 { font-size: clamp(4.4rem, 7.8vw, 7.4rem); line-height: .99; letter-spacing: 
 .store-button strong { font-size: 1rem; font-weight: 600; line-height: 1.4; }
 .store-icon { width: 1.6rem; height: 1.6rem; stroke-width: 1.2; }
 .store-button:hover { background: var(--brown); color: var(--cream); }
-.project-site { margin-top: .8rem; }
-.giiyo-cover { background: var(--pink); color: var(--brown); }
-.giiyo-type { font: 400 clamp(5rem, 8vw, 8rem)/.95 var(--serif); letter-spacing: -.065em; margin-block: 2.5rem; }
-.giiyo-cover > .cover-caption { border-top: 1px solid rgb(121 55 7 / 35%); padding-top: 1.4rem; }
-.impact-note { display: flex; align-items: center; gap: 1rem; margin-block: 1.75rem; padding-block: 1.25rem; border-block: 1px solid var(--line); color: var(--brown); }
-.impact-note strong { font: 400 3rem/1 var(--serif); letter-spacing: -.06em; }
-.impact-note span { font-size: .8125rem; line-height: 1.45; }
 
 /* Practice, skills and education */
-.about-top { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: end; }
-.about-top h2 { font-size: clamp(2.5rem, 3.8vw, 3.6rem); }
-.about-intro { color: var(--muted); font-size: 1rem; }
-.skills-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-block: 4.5rem 1.7rem; }
-.skills-heading h3 { font-size: 1.8rem; }
-.skills-heading .eyebrow { font-size: .75rem; }
-.skills-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line); }
-.skill-group { padding: 1.75rem 1.5rem 2rem 0; }
-.skill-group + .skill-group { border-left: 1px solid var(--line); padding-left: 1.5rem; }
-.skill-number { display: block; color: var(--muted); font: 400 .8125rem/1 var(--serif); margin-bottom: 1.1rem; }
-.skill-group h4 { font-size: 1rem; }
-.skill-group ul { list-style: none; margin: 1rem 0 0; padding: 0; color: var(--muted); font-size: .875rem; line-height: 1.65; }
-.skill-group li + li { margin-top: .4rem; }
 .education { display: grid; grid-template-columns: .9fr 1.1fr 1fr; gap: 2.5rem; margin-top: 3rem; }
 .education h3 { font-size: 1.6rem; }
 .education .eyebrow { font-size: .75rem; margin-bottom: .75rem; }
@@ -408,3 +365,66 @@ h1 { font-size: clamp(4.4rem, 7.8vw, 7.4rem); line-height: .99; letter-spacing: 
   h2, h3, h4, .section-index, .skills-heading { break-after: avoid; }
   p, li { orphans: 3; widows: 3; }
 }
+
+/* ---------- Condensed Cardano roles ---------- */
+
+/* ---------- Koki, as one compact card ---------- */
+.koki-card { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem; align-items: center; margin-top: 2.75rem; padding: clamp(1.5rem, 2.5vw, 2.2rem); border: 1px solid var(--line); background: var(--cream); }
+.koki-card h3 { font-size: 1.6rem; margin-block: .6rem .7rem; letter-spacing: -.02em; }
+.koki-card > div > p:last-child { font-size: .9375rem; color: var(--muted); }
+.koki-card .store-actions { margin-top: 0; }
+.koki-card-links { display: grid; gap: .8rem; justify-items: start; }
+
+/* ---------- Skills as rows, not columns ---------- */
+.skill-rows { margin: 2.5rem 0 0; border-top: 1px solid var(--line); }
+.skill-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem; padding: 1.15rem 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.skill-row dt { font: 500 .8125rem/1.3 var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--brown); }
+.skill-row dd { margin: 0; font-size: 1rem; color: var(--muted); }
+
+/* ---------- Education & contact, trimmed ---------- */
+.contact h2 { font-size: clamp(2.5rem, 4.5vw, 4rem); }
+
+@media (max-width: 760px) {
+  .cardano-roles { grid-template-columns: 1fr; gap: 1.6rem; }
+  .koki-card { grid-template-columns: 1fr; gap: 1.5rem; }
+  .skill-row { grid-template-columns: 1fr; gap: .4rem; }
+  .education-section .education { grid-template-columns: 1fr; }
+}
+
+/* ---------- CV discipline: less air, smaller display type ---------- */
+:root { --section-space: clamp(2.75rem, 4.5vw, 4.25rem); }
+h2 { font-size: clamp(2.1rem, 3.2vw, 3rem); }
+.section-heading { margin-bottom: 2.2rem; gap: 3rem; }
+.experience .section-heading { margin-bottom: 2.4rem; }
+.hero { padding-top: clamp(2rem, 4vw, 4rem); }
+.standards-content h3 { margin-block: .8rem 1.1rem; font-size: clamp(1.7rem, 2.4vw, 2.3rem); }
+.cps-number { font-size: clamp(3.5rem, 4.5vw, 4.5rem); }
+.contact h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
+.koki-card { margin-top: 2rem; }
+.skill-rows { margin-top: 1.8rem; }
+.edu-block { margin-top: 2.4rem; padding-top: 1.8rem; border-top: 1px solid var(--line); }
+.edu-block h3 { font-size: 1.25rem; letter-spacing: -.015em; }
+.edu-block .education { grid-template-columns: 1fr 1fr; margin-top: 1.4rem; }
+h1 { font-size: clamp(3.8rem, 6.4vw, 6rem); }
+.hero-role { margin-top: 1.4rem; }
+.hero-actions { margin-top: 1.4rem; }
+@media (max-width: 760px) { .edu-block .education { grid-template-columns: 1fr; } }
+
+/* ---------- Selected publication (report cover) ---------- */
+@media (max-width: 760px) {
+  .pub-card { grid-template-columns: 8rem 1fr; gap: .9rem; }
+}
+
+/* ---------- Cardano notes: publication + additional role ---------- */
+.cardano-notes { margin: 2rem 0 0; border-top: 1px solid var(--line); }
+.note-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.note-row dt { font: 500 .75rem/1.4 var(--sans); text-transform: uppercase; letter-spacing: .12em; color: var(--brown); }
+.note-row dd { margin: 0; font-size: .9375rem; color: var(--muted); line-height: 1.6; }
+.note-row dd strong { color: var(--brown); font-weight: 600; }
+.note-link { display: inline-block; font-size: 1.0625rem; font-family: var(--serif); color: var(--brown); text-decoration: none; }
+.note-link:hover { text-decoration: underline; }
+.note-meta { display: block; margin-top: .2rem; font-size: .8125rem; color: var(--muted); }
+@media (max-width: 760px) { .note-row { grid-template-columns: 1fr; gap: .5rem; } }
+.cardano-list { margin-top: 2.2rem; }
+.cardano-list .experience-row:last-child { border-bottom: 1px solid var(--line); }
+.cardano-notes { margin-top: 0; border-top: none; }
