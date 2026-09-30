@@ -12,6 +12,7 @@ const SITE_CONFIG = Object.freeze({
   cps: "https://github.com/cardano-foundation/CIPs/blob/master/CPS-0033/README.md",
   cpsPr: "https://github.com/cardano-foundation/CIPs/pull/1211",
   cv: "assets/Maureen-Wepngong-CV.pdf",
+  productCv: "assets/cv/MaureenWepngongProductCV.pdf",
   email: "maureen@giiyotech.com",
   giiyo: "https://giiyotech.com/",
   koki: "https://kokiafrique.com/",
@@ -21,6 +22,11 @@ const SITE_CONFIG = Object.freeze({
   portraitIsPlaceholder: false,
 });
 
+// Local paths above are relative to the site root, which is where this script lives,
+// so they resolve correctly from /product/ and /blog/ pages too.
+const SITE_ROOT = new URL(".", document.currentScript ? document.currentScript.src : window.location.href);
+const resolveLink = (value) => (/^[a-z]+:/i.test(value) ? value : new URL(value, SITE_ROOT).href);
+
 // Real hrefs in the HTML provide a complete, readable site without JavaScript.
 document.querySelectorAll("[data-link]").forEach((link) => {
   const key = link.dataset.link;
@@ -29,7 +35,7 @@ document.querySelectorAll("[data-link]").forEach((link) => {
     link.hidden = true;
     return;
   }
-  link.href = key === "email" ? `mailto:${value}` : value;
+  link.href = key === "email" ? `mailto:${value}` : resolveLink(value);
 });
 document.querySelectorAll("[data-email-text]").forEach((element) => {
   element.textContent = SITE_CONFIG.email;
@@ -46,8 +52,8 @@ if (portrait) {
     fallback.removeAttribute("aria-hidden");
   };
   portrait.addEventListener("error", showPortraitFallback);
-  if (portrait.getAttribute("src") !== SITE_CONFIG.portrait) {
-    portrait.src = SITE_CONFIG.portrait;
+  if (portrait.src !== resolveLink(SITE_CONFIG.portrait)) {
+    portrait.src = resolveLink(SITE_CONFIG.portrait);
   }
   if (!SITE_CONFIG.portraitIsPlaceholder) portrait.alt = "Maureen Wepngong";
   if (portrait.complete && portrait.naturalWidth === 0) showPortraitFallback();
@@ -115,4 +121,21 @@ if ("IntersectionObserver" in window) {
     });
   }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
   document.querySelectorAll("main > section[id]").forEach((section) => observer.observe(section));
+}
+
+// Category filter on the writing index; without JavaScript every article stays listed.
+const postFilter = document.querySelector(".post-filter");
+if (postFilter) {
+  const buttons = [...postFilter.querySelectorAll("button[data-filter]")];
+  const rows = [...document.querySelectorAll("#post-list .post-row")];
+  postFilter.hidden = false;
+  postFilter.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-filter]");
+    if (!button) return;
+    const category = button.dataset.filter;
+    buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    rows.forEach((row) => {
+      row.hidden = category !== "all" && row.dataset.category !== category;
+    });
+  });
 }

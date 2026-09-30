@@ -1,0 +1,175 @@
+<!doctype html>
+<!--
+  Source for assets/cv/MaureenWepngongProductCV.pdf. Edit this file, never the PDF:
+  rebuilding overwrites it. Rebuild by running ./build-cv.sh
+
+  Two pages at most. Single column, real text and plain section headings so
+  applicant tracking systems read it in order. Keep roles and figures in step
+  with product/index.html.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wepngong Maureen, Product CV</title>
+<style>
+@font-face { font-family:"DM Sans"; src:url("assets/fonts/dm-sans-latin.woff2") format("woff2"); font-weight:100 1000; }
+@font-face { font-family:"Fraunces"; src:url("assets/fonts/fraunces-latin.woff2") format("woff2"); font-weight:100 900; }
+
+:root {
+  --pink:#ffe0ee; --brown:#793707; --cream:#fffdf8; --pink-wash:#fff1f6;
+  --ink:#30241e; --muted:#5e4c43; --line:#d8c4b9;
+  --serif:"Fraunces",Georgia,serif; --sans:"DM Sans",Arial,sans-serif;
+}
+
+@page { size:A4; margin:13mm 15mm 12mm; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body { font:400 9.6pt/1.5 var(--sans); color:var(--ink); background:#fff; }
+a { color:var(--brown); text-decoration:none; }
+.nowrap { white-space:nowrap; }
+
+header { padding-bottom:8pt; border-bottom:1.4pt solid var(--brown); }
+h1 { font:500 25pt/1 var(--serif); letter-spacing:-.02em; color:var(--brown); }
+h1 .dot { color:var(--brown); }
+.role-line { margin-top:6pt; font:600 7.8pt/1.4 var(--sans); letter-spacing:.12em; text-transform:uppercase; color:var(--brown); }
+.contact { margin-top:6pt; font-size:8.3pt; color:var(--muted); }
+.contact span + span::before { content:"  /  "; white-space:pre; color:var(--line); }
+
+section { margin-top:15pt; }
+h2 { font:600 8.4pt/1 var(--sans); letter-spacing:.02em; text-transform:uppercase; color:var(--brown); padding-bottom:5pt; margin-bottom:7pt; border-bottom:.6pt solid var(--line); }
+.summary { font-size:9.6pt; line-height:1.55; color:var(--ink); }
+
+.role { break-inside:avoid; }
+.role + .role { margin-top:10pt; }
+h3 { font:600 10.4pt/1.3 var(--sans); color:var(--ink); }
+h3 .title { color:var(--brown); font-weight:500; }
+.where { margin-top:1pt; font-size:8.8pt; color:var(--muted); }
+ul { margin-top:3.5pt; padding-left:11pt; }
+li { font-size:9.4pt; line-height:1.5; color:var(--ink); }
+li + li { margin-top:2pt; }
+li::marker { color:var(--brown); }
+
+.skills p { font-size:9.4pt; line-height:1.5; }
+.skills p + p { margin-top:3pt; }
+.skills strong { font-weight:600; color:var(--brown); }
+
+.edu p { font-size:9.4pt; }
+.edu p + p { margin-top:4pt; }
+.edu strong { font-weight:600; }
+.edu span { color:var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Wepngong Maureen<span class="dot">.</span></h1>
+  <p class="role-line">Technical Product | Blockchain Standards &amp; Governance | Software Engineer</p>
+  <p class="contact">
+    <span>Douala, Cameroon</span><span>+237 670 199 687</span><span><a href="mailto:maureen@giiyotech.com">maureen@giiyotech.com</a></span><br>
+    <span><a href="https://www.linkedin.com/in/wepngongmaureen">linkedin.com/in/wepngongmaureen</a></span><span><a href="https://github.com/maureenblack">github.com/maureenblack</a></span><span><a href="https://maureenblack.github.io/product/">maureenblack.github.io/product</a></span>
+  </p>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p class="summary">Technical product, software and blockchain governance professional with experience turning ambiguous ecosystem and user needs into structured problem statements, technical requirements and decision ready documentation. <span class="nowrap">Co-authored</span> CPS-0033 and worked through a 29 commit public GitHub review cycle, triaging feedback, identifying gaps, narrowing scope and iteratively reframing a complex technical problem. Brings end to end software product ownership, stakeholder research, proposal analysis and cross functional delivery experience, with a strong track record of synthesising messy input into clear documentation and moving work from problem definition towards execution.</p>
+</section>
+
+<section>
+  <h2>Product, Standards &amp; Blockchain Experience</h2>
+
+  <div class="role">
+    <h3>CPS-0033: DRep Voting Power Concentration <span class="title">| Co-author</span></h3>
+    <p class="where"><a href="https://github.com/cardano-foundation/CIPs/blob/master/CPS-0033/README.md">Cardano Improvement Proposals Repository</a> | 2026</p>
+    <ul>
+      <li>Co-authored a formal Cardano Problem Statement, turning governance research, stakeholder interviews, workshops and ecosystem feedback into a structured, solution agnostic technical problem definition.</li>
+      <li>Worked through a 29 commit public GitHub review cycle, triaging editor feedback, identifying gaps, narrowing scope and substantially reframing the document around ledger rules, CIP-0119 metadata, wallet behaviour and explorer behaviour.</li>
+      <li>Managed iterative revisions across scope, structure, technical references, Markdown, review comments and standards process requirements through triage and merge.</li>
+      <li>Synthesised complex technical and community input into clear documentation that editors and ecosystem contributors could review and act on.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Community Governance Research Consultant</h3>
+    <p class="where">Input Output Global | Remote | Sep 2025 to Present</p>
+    <ul>
+      <li>Synthesise stakeholder interviews, workshops, surveys and on chain data into structured findings, recurring themes, open questions and decision relevant insights.</li>
+      <li>Conduct stakeholder interviews and translate qualitative and quantitative input into concise analysis for technical and governance audiences.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Lead Developer &amp; Project Manager</h3>
+    <p class="where">Maxwell Technologies | Douala, Cameroon | Jan 2023 to Dec 2024</p>
+    <ul>
+      <li>Led client facing software delivery, translating business problems and requirements into scoped technical work for a 12 person engineering team.</li>
+      <li>Coordinated priorities across concurrent software projects, connecting client needs, engineering constraints and delivery decisions.</li>
+      <li>Delivered 12 revenue generating applications valued at $180,000 while improving delivery time by 25% and code quality by 30%.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Koki <span class="title">| Founder &amp; Independent Product Developer</span></h3>
+    <p class="where"><a href="https://kokiafrique.com/">kokiafrique.com</a> | 2026 to Present</p>
+    <ul>
+      <li>Took a bilingual African food product from concept through product definition, design, development, testing and launch on iOS and Android.</li>
+      <li>Owned product scope and feature decisions alongside React Native development, backend architecture, UI/UX, QA and release management.</li>
+      <li>Built and shipped the product independently, balancing user experience, technical constraints and release priorities across the full product lifecycle.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Leadership &amp; Governance Experience</h2>
+
+  <div class="role">
+    <h3>Founder, Programme &amp; Technical Lead</h3>
+    <p class="where">Giiyo Tech | Cameroon | Mar 2024 to Present</p>
+    <ul>
+      <li>Lead multiple concurrent technical programmes and partnerships, coordinating external stakeholders, programme requirements, volunteers and delivery across multiple locations.</li>
+      <li>Built programmes and systems that have reached more than 500 learners while managing priorities across technical, programme and partnership workstreams.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Cardano Delegated Representative</h3>
+    <p class="where">Cardano Community | Jan 2025 to Present</p>
+    <ul>
+      <li>Analyse governance actions and proposals, determine positions using available evidence and communicate voting rationale on behalf of 55 delegators representing approximately 600,000 ADA.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Cardano Constitutional Delegate for Cameroon</h3>
+    <p class="where">2024</p>
+    <ul>
+      <li>Represented Cameroon at the Global Constitutional Convention alongside participants from more than 30 countries, contributing to discussion, drafting and negotiation of the first Cardano Constitution.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Cardano Future Workstreams &amp; Definitions</h3>
+    <p class="where">Dec 2024 to Apr 2025</p>
+    <ul>
+      <li>Elected contributor to decentralised governance design and co-author of sections of the Community Constitution definitions work.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Core Skills</h2>
+  <p><strong>Product &amp; Analysis:</strong> Problem framing, requirements analysis, proposal review, stakeholder synthesis, prioritisation, technical product ownership, cross functional delivery, decision documentation</p>
+  <p><strong>Open Standards &amp; GitHub:</strong> CIP/CPS process, GitHub, pull requests, Git, Markdown, review workflows, issue discussion, technical proposal review</p>
+  <p><strong>Research &amp; Communication:</strong> Stakeholder interviews, qualitative synthesis, technical writing, async documentation, governance research, presentations</p>
+  <p><strong>AI Workflows:</strong> AI assisted research, summarisation, drafting, synthesis, prompt development, workflow improvement</p>
+  <p><strong>Engineering:</strong> JavaScript, TypeScript, React.js, React Native, Node.js, Supabase, HTML, CSS</p>
+</section>
+
+<section class="edu">
+  <h2>Education</h2>
+  <p><strong>Bachelor of Science, Public Administration</strong><br><span>University of Buea | Aug 2019 to Dec 2022</span></p>
+  <p><strong>Software Engineering Training</strong><br><span>Datagirls Technology | Buea</span></p>
+</section>
+
+</body>
+</html>

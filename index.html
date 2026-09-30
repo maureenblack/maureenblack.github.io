@@ -1,55 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#FFE0EE">
-  <title>Maureen Wepngong — Software Engineer &amp; Cardano Standards Contributor</title>
-  <meta name="description" content="Maureen Wepngong is a software engineer and Cardano standards contributor. Co-author of CPS-0033: DRep Voting Power Concentration, with hands-on CIP/CPS process and GitHub review experience.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:site_name" content="Maureen Wepngong">
-  <meta property="og:title" content="Maureen Wepngong — Software Engineer &amp; Cardano Standards Contributor">
-  <meta property="og:description" content="Software engineering, open technical standards and Cardano governance. Co-author of CPS-0033.">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Maureen Wepngong — Software Engineer &amp; Cardano Standards Contributor">
-  <meta name="twitter:description" content="Software engineering, open technical standards and Cardano governance. Co-author of CPS-0033.">
-  <link rel="canonical" href="https://maureenblack.github.io/">
-  <meta property="og:url" content="https://maureenblack.github.io/">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- One inline sprite keeps the interface icons local and lightweight. -->
-  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
-    <symbol id="icon-down" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M5 17v4h14v-4"/></symbol>
-    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
-    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m4 3 12 9L4 21V3Zm0 0 15 8c1.3.7 1.3 1.3 0 2L4 21m0-18 12 15M4 21 16 6"/></symbol>
-    <symbol id="icon-apple" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M16.9 1.5c.1 1.2-.4 2.4-1.1 3.3-.8 1-1.9 1.6-3.1 1.5-.1-1.2.4-2.4 1.2-3.3.8-.9 2-1.5 3-1.5Zm3.3 16.2c-.5 1.1-.8 1.6-1.4 2.6-.9 1.3-2.2 3-3.7 3-1.3 0-1.6-.8-3.4-.8-1.7 0-2.1.8-3.4.8-1.5 0-2.7-1.5-3.6-2.8-2.5-3.7-2.8-8.1-1.3-10.4 1.1-1.7 2.8-2.7 4.4-2.7 1.6 0 2.6.8 3.9.8 1.2 0 2-.8 3.8-.8 1.5 0 3 .8 4 2-3.5 2-3 6.5.7 8.3Z"/></symbol>
-  </svg>
-
-  <header class="site-header">
-    <div class="shell nav-row">
-      <a class="wordmark" href="#top" aria-label="Maureen Wepngong, back to top">Maureen<span aria-hidden="true">.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>
-        <span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span>
-      </button>
-      <nav id="primary-nav" aria-label="Primary navigation">
-        <a href="#cardano">Cardano</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a class="nav-contact" href="#contact">Contact <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
+---
+layout: default
+title: "Maureen Wepngong | Software Engineer, Builder & Standards Contributor"
+description: "Maureen Wepngong is a software engineer and Cardano standards contributor. Co-author of CPS-0033: DRep Voting Power Concentration, with hands-on CIP/CPS process and GitHub review experience."
+og_description: "Software engineering, open technical standards and Cardano governance. Co-author of CPS-0033."
+image: "/assets/social/home.png"
+contact_index: "05 / Contact"
+---
     <section class="hero shell" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow hero-eyebrow">Engineering · Standards · Governance</p>
@@ -58,7 +14,7 @@
         <p class="hero-summary">I build software products and contribute to open technical standards, decentralised governance and technology education.</p>
         <div class="hero-actions">
           <a class="button" data-link="cps" href="https://github.com/cardano-foundation/CIPs/blob/master/CPS-0033/README.md" target="_blank" rel="noopener noreferrer">View CPS-0033 <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
-          <a class="text-link cv-link" data-link="cv" href="assets/Maureen-Wepngong-CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a>
+          <a class="text-link cv-link" data-link="cv" href="{{ '/assets/Maureen-Wepngong-CV.pdf' | relative_url }}" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a>
         </div>
         <div class="hero-links" aria-label="Professional profiles">
           <a class="quiet-link" data-link="github" href="https://github.com/maureenblack" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -69,7 +25,7 @@
       <figure class="portrait">
         <div class="portrait-frame">
           <div class="portrait-fallback" aria-hidden="true"><span>m<span class="fallback-w">w</span></span><small>Maureen Wepngong</small></div>
-          <img id="portrait-image" src="assets/maureen.jpg" alt="Maureen Wepngong" width="960" height="1200" fetchpriority="high" decoding="async">
+          <img id="portrait-image" src="{{ '/assets/maureen.jpg' | relative_url }}" alt="Maureen Wepngong" width="960" height="1200" fetchpriority="high" decoding="async">
         </div>
         <figcaption><span>Based in Douala, Cameroon</span><span class="portrait-index" aria-hidden="true">01 / MW</span></figcaption>
       </figure>
@@ -127,11 +83,12 @@
         <article class="experience-row">
           <div class="experience-meta"><p>Mar 2024 — Present</p><span>Cameroon</span></div>
           <div class="experience-main"><h3>Founder</h3><p class="organisation"><a data-link="giiyo" href="https://giiyotech.com/" target="_blank" rel="noopener noreferrer">Giiyo Tech <span aria-hidden="true">↗</span></a></p></div>
-          <div class="experience-detail"><p>Founded and lead a STEM education nonprofit. Coordinate technical programmes, curriculum, partnerships and volunteers, bringing hands-on robotics and coding to <strong>500+ learners across Cameroon</strong>.</p><p class="work-detail">Technical programmes · Partnerships · Organisational leadership</p></div>
+          <div class="experience-detail"><p>Founded and lead a STEM education nonprofit. Coordinate technical programmes, curriculum, partnerships and volunteers, bringing hands-on robotics and coding to <strong>500+ learners across Cameroon</strong>.</p><p class="work-detail">Technical programmes · 
+Partnerships · Organisational leadership</p></div>
         </article>
         <article class="experience-row">
           <div class="experience-meta"><p>Jan 2023 — Dec 2024</p><span>Douala, Cameroon</span></div>
-          <div class="experience-main"><h3>Senior Developer<br> &amp; Project Manager</h3><p class="organisation">Maxwell Technologies</p></div>
+          <div class="experience-main"><h3>Lead Developer<br> &amp; Project Manager</h3><p class="organisation">Maxwell Technologies</p></div>
           <div class="experience-detail"><p>Led client-facing software delivery for a <strong>12-person engineering team</strong>, translating business requirements into technical specifications and coordinating review and delivery across concurrent projects. Also facilitated online software engineering training for students.</p><p class="work-detail">Technical specification · Review coordination · Technical facilitation</p></div>
         </article>
       </div>
@@ -168,12 +125,12 @@
       </div>
     </section>
 
-
-    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
-      <div class="shell contact-inner"><p class="eyebrow section-index">04 / Contact</p><h2 id="contact-title">Get in touch<span>.</span></h2><div class="contact-bottom"><a class="contact-email" data-link="email" href="mailto:maureen@giiyotech.com"><span data-email-text>maureen@giiyotech.com</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><div class="contact-profiles"><a class="text-link" data-link="github" href="https://github.com/maureenblack" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="text-link" data-link="linkedin" href="https://www.linkedin.com/in/wepngongmaureen" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="text-link cv-link" data-link="cv" href="assets/Maureen-Wepngong-CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></div>
+    <section class="writing section-pad shell" id="writing" aria-labelledby="writing-title">
+      <div class="section-heading"><div><p class="eyebrow section-index">04 / Writing</p><h2 id="writing-title">Things I have learned<br> by building them<span>.</span></h2></div><p class="section-intro">Notes on products, software, standards, founders and what happens when ideas meet reality.</p></div>
+      <ol class="post-list">
+        {%- for post in site.posts limit: 3 %}
+        {% include post-row.html post=post heading="h3" %}
+        {%- endfor %}
+      </ol>
+      <a class="text-link writing-more" href="{{ '/blog/' | relative_url }}">All writing <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
     </section>
-  </main>
-
-  <footer class="site-footer shell"><div><a class="footer-name" href="#top">Maureen Wepngong</a><p>Software Engineer · Builder · Cardano Contributor</p></div><div class="footer-links"><a data-link="github" href="https://github.com/maureenblack" target="_blank" rel="noopener noreferrer">GitHub</a><a data-link="linkedin" href="https://www.linkedin.com/in/wepngongmaureen" target="_blank" rel="noopener noreferrer">LinkedIn</a><a data-link="email" href="mailto:maureen@giiyotech.com">Email</a><a href="#top" aria-label="Back to top">↑</a></div></footer>
-</body>
-</html>

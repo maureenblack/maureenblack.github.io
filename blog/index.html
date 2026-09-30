@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Writing | Maureen Wepngong"
+og_title: "Writing | Maureen Wepngong"
+description: "Essays by Maureen Wepngong on products, software, building, technical systems and governance."
+image: "/assets/social/blog.png"
+nav: blog
+---
+{%- assign categories = site.posts | map: "category" | uniq -%}
+    <section class="page-head shell" aria-labelledby="writing-title">
+      <p class="eyebrow">Notes &amp; essays</p>
+      <h1 id="writing-title">Writing<span class="name-period">.</span></h1>
+      <p class="hero-summary">Notes from building products, organisations and technical systems, especially the parts that looked much simpler before I tried them.</p>
+    </section>
+
+    <section class="shell section-pad writing-index" aria-label="Articles">
+      {%- if categories.size > 1 %}
+      <div class="post-filter" role="group" aria-label="Filter by category" hidden><span>Filter</span><button type="button" aria-pressed="true" data-filter="all">All</button>{% for category in categories %}<button type="button" aria-pressed="false" data-filter="{{ category | slugify }}">{{ category }}</button>{% endfor %}</div>
+      {%- endif %}
+      <ol class="post-list" id="post-list">
+        {%- for post in site.posts %}
+        {% include post-row.html post=post heading="h2" %}
+        {%- endfor %}
+      </ol>
+    </section>

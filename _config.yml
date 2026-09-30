@@ -1,0 +1,55 @@
+# Jekyll powers the shared layouts and the writing section.
+# The site's own HTML and styles.css are the theme; no gem theme is used.
+title: Maureen Wepngong
+description: Software engineering, open technical standards and Cardano governance.
+url: https://maureenblack.github.io
+baseurl: ""
+
+# The site is its own theme. This stops GitHub Pages applying its default one.
+theme: null
+lang: en_GB
+timezone: Africa/Douala
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-sitemap
+
+# Comments on articles, stored as GitHub Discussions in this repo (giscus.app).
+# Readers need a GitHub account to comment. Set enabled to false to hide comments.
+giscus:
+  enabled: true
+  repo: maureenblack/maureenblack.github.io
+  repo_id: R_kgDOUgoYlg
+  category: Announcements
+  category_id: DIC_kwDOUgoYls4DGsEL
+  # The brand theme lives on the live site. Use light to switch to giscus's plain theme.
+  theme: /assets/giscus-theme.css
+
+# Default social card when a page has no card of its own.
+default_image: /assets/social/home.png
+
+# New posts need only title, description, date and category in their front matter.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:title/
+      og_type: article
+      contact_index: Contact
+
+# Sources and tooling that should not be published.
+exclude:
+  - README.md
+  - build-cv.sh
+  - cv-print.html
+  - cv-product.html
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .DS_Store

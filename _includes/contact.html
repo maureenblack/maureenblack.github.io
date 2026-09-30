@@ -1,0 +1,8 @@
+{%- if page.cv == "product" -%}
+  {%- assign cv_key = "productCv" -%}{%- assign cv_path = "/assets/cv/MaureenWepngongProductCV.pdf" -%}{%- assign cv_label = "Download Product CV" -%}
+{%- else -%}
+  {%- assign cv_key = "cv" -%}{%- assign cv_path = "/assets/Maureen-Wepngong-CV.pdf" -%}{%- assign cv_label = "Download CV" -%}
+{%- endif -%}
+<section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner"><p class="eyebrow section-index">{{ page.contact_index | default: "Contact" }}</p><h2 id="contact-title">Get in touch<span>.</span></h2><div class="contact-bottom"><a class="contact-email" data-link="email" href="mailto:maureen@giiyotech.com"><span data-email-text>maureen@giiyotech.com</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><div class="contact-profiles"><a class="text-link" data-link="github" href="https://github.com/maureenblack" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="text-link" data-link="linkedin" href="https://www.linkedin.com/in/wepngongmaureen" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="text-link cv-link" data-link="{{ cv_key }}" href="{{ cv_path | relative_url }}" download>{{ cv_label }} <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></div>
+    </section>

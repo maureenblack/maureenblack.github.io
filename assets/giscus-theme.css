@@ -1,0 +1,46 @@
+/* Comment box theme for giscus: its light theme, recoloured to the site brand.
+   giscus loads this from the live site, so changes show after a push. */
+@import url("https://giscus.app/themes/light.css");
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("https://maureenblack.github.io/assets/fonts/dm-sans-latin.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+main {
+  --color-fg-default: #30241e;
+  --color-fg-muted: #756055;
+  --color-fg-subtle: #756055;
+  --color-canvas-default: #fffdf8;
+  --color-canvas-overlay: #fffdf8;
+  --color-canvas-inset: #fff1f6;
+  --color-canvas-subtle: #fff1f6;
+  --color-border-default: #d8c4b9;
+  --color-border-muted: #eee6dc;
+  --color-accent-fg: #793707;
+  --color-accent-emphasis: #793707;
+  --color-accent-muted: #79370733;
+  --color-accent-subtle: #ffe0ee;
+  --color-btn-text: #793707;
+  --color-btn-bg: #fffdf8;
+  --color-btn-border: #d8c4b9;
+  --color-btn-hover-bg: #fff1f6;
+  --color-btn-hover-border: #793707;
+  --color-btn-active-bg: #ffe0ee;
+  --color-btn-selected-bg: #ffe0ee;
+  --color-btn-primary-text: #fffdf8;
+  --color-btn-primary-bg: #793707;
+  --color-btn-primary-border: #793707;
+  --color-btn-primary-hover-bg: #572503;
+  --color-btn-primary-hover-border: #572503;
+  --color-btn-primary-selected-bg: #572503;
+  --color-btn-primary-disabled-text: #fffdf8cc;
+  --color-btn-primary-disabled-bg: #79370780;
+  --color-btn-primary-disabled-border: #79370700;
+  --color-segmented-control-bg: #eee6dc;
+  --color-segmented-control-button-bg: #fffdf8;
+  --color-segmented-control-button-selected-border: #d8c4b9;
+  font-family: "DM Sans", Arial, sans-serif;
+}

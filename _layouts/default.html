@@ -1,0 +1,112 @@
+{%- assign is_post = false -%}{%- if page.layout == "post" -%}{%- assign is_post = true -%}{%- endif -%}
+{%- if is_post -%}{%- assign seo_title = page.title | append: " | Maureen Wepngong" -%}{%- else -%}{%- assign seo_title = page.title -%}{%- endif -%}
+{%- assign og_title = page.og_title | default: page.title -%}
+{%- assign og_description = page.og_description | default: page.description -%}
+{%- comment -%} A post uses /assets/social/<slug>.png when that file exists, otherwise the writing card. {%- endcomment -%}
+{%- assign image = page.image -%}
+{%- if is_post and image == nil -%}
+  {%- assign card = "/assets/social/" | append: page.slug | append: ".png" -%}
+  {%- assign card_file = site.static_files | where: "path", card | first -%}
+  {%- if card_file -%}{%- assign image = card -%}{%- else -%}{%- assign image = "/assets/social/blog.png" -%}{%- endif -%}
+{%- endif -%}
+{%- assign image = image | default: site.default_image | absolute_url -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFE0EE">
+  <title>{{ seo_title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta name="author" content="Maureen Wepngong">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:locale" content="{{ site.lang }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ og_title | escape }}">
+  <meta property="og:description" content="{{ og_description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {%- if is_post %}
+  <meta property="og:image:alt" content="{{ page.title | escape }}, an article by Maureen Wepngong">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="Maureen Wepngong">
+  <meta property="article:section" content="{{ page.category }}">
+  {%- endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ og_title | escape }}">
+  <meta name="twitter:description" content="{{ og_description | escape }}">
+  <meta name="twitter:image" content="{{ image }}">
+  {%- if is_post %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "datePublished": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+    "author": { "@type": "Person", "@id": {{ "/#person" | absolute_url | jsonify }}, "name": "Maureen Wepngong", "url": {{ "/" | absolute_url | jsonify }} },
+    "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+    "image": {{ image | jsonify }},
+    "articleSection": {{ page.category | jsonify }}
+  }
+  </script>
+  {%- endif %}
+  {%- if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "{{ '/#person' | absolute_url }}",
+        "name": "Maureen Wepngong",
+        "alternateName": "Wepngong Maureen",
+        "url": "{{ '/' | absolute_url }}",
+        "image": "{{ '/assets/maureen.jpg' | absolute_url }}",
+        "jobTitle": "Software Engineer",
+        "description": "Software engineer, founder of Giiyo Tech and Cardano standards and governance contributor. Co-author of CPS-0033.",
+        "address": { "@type": "PostalAddress", "addressLocality": "Douala", "addressCountry": "CM" },
+        "founder": [
+          { "@type": "Organization", "name": "Giiyo Tech", "url": "https://giiyotech.com/" }
+        ],
+        "knowsAbout": ["Software engineering", "Technical product", "Cardano governance", "Blockchain standards", "React Native"],
+        "sameAs": [
+          "https://www.linkedin.com/in/wepngongmaureen",
+          "https://github.com/maureenblack"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ '/#website' | absolute_url }}",
+        "name": "Maureen Wepngong",
+        "url": "{{ '/' | absolute_url }}",
+        "author": { "@id": "{{ '/#person' | absolute_url }}" }
+      }
+    ]
+  }
+  </script>
+  {%- endif %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/fonts/fraunces-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/dm-sans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  <script src="{{ '/script.js' | relative_url }}" defer></script>
+</head>
+<body{% unless page.url == "/" %} id="top"{% endunless %}>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include sprite.html %}
+
+  {% include header.html %}
+
+  <main id="main">
+{{ content }}
+    {% include contact.html %}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{%- if site.giscus.enabled and page.comments != false -%}
+<section class="comments" aria-labelledby="comments-title">
+      <div class="comments-inner">
+        <p class="eyebrow">Comments</p>
+        <h2 id="comments-title">What do you think<span>?</span></h2>
+        <p class="comments-note">Comments use GitHub Discussions, so you will need a GitHub account to join in.</p>
+        <div class="giscus"></div>
+        <script src="https://giscus.app/client.js"
+          data-repo="{{ site.giscus.repo }}"
+          data-repo-id="{{ site.giscus.repo_id }}"
+          data-category="{{ site.giscus.category }}"
+          data-category-id="{{ site.giscus.category_id }}"
+          data-mapping="pathname"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="{% if site.giscus.theme contains '/' %}{{ site.giscus.theme | absolute_url }}{% else %}{{ site.giscus.theme | default: 'light' }}{% endif %}"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async></script>
+        <noscript><p class="comments-note">Comments need JavaScript. You can also reply on <a href="https://github.com/{{ site.giscus.repo }}/discussions">GitHub Discussions</a>.</p></noscript>
+      </div>
+    </section>
+{%- endif -%}

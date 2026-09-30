@@ -1,0 +1,29 @@
+---
+layout: default
+---
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-head">
+        <p class="eyebrow article-kicker"><a href="{{ '/blog/' | relative_url }}">Writing</a><i aria-hidden="true">/</i><span>{{ page.category }}</span></p>
+        <h1 class="article-title" id="article-title">{{ page.title | escape }}</h1>
+        <p class="standfirst">{{ page.description | escape }}</p>
+        <p class="article-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time><i aria-hidden="true">·</i><span>{% include reading-time.html content=content %} min read</span></p>
+      </header>
+      <div class="prose">
+{{ content }}
+      </div>
+      <footer class="article-foot">
+        {%- if page.related_url %}
+        <a class="related-read" href="{{ page.related_url | relative_url }}"><span class="eyebrow">{{ page.related_label | default: "Related work" }}</span><span class="related-title">{{ page.related_title | escape }}</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        {%- endif %}
+        <a class="text-link" href="{{ '/blog/' | relative_url }}">All writing <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+      </footer>
+    </article>
+
+    {% include comments.html %}
+
+    {%- if page.previous or page.next %}
+    <nav class="post-pager shell" aria-label="More writing">
+      {%- if page.previous %}<a class="pager-prev" href="{{ page.previous.url | relative_url }}"><span class="eyebrow">Previous</span><span class="pager-title">{{ page.previous.title | escape }}</span></a>{% endif %}
+      {%- if page.next %}<a class="pager-next" href="{{ page.next.url | relative_url }}"><span class="eyebrow">Next</span><span class="pager-title">{{ page.next.title | escape }}</span></a>{% endif %}
+    </nav>
+    {%- endif %}
