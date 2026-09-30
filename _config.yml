@@ -17,6 +17,7 @@ kramdown:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Comments on articles, stored as GitHub Discussions in this repo (giscus.app).
 # Readers need a GitHub account to comment. Set enabled to false to hide comments.
