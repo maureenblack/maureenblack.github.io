@@ -1,0 +1,4 @@
+<figure class="quote-card">
+<blockquote><p>{{ include.quote }}</p></blockquote>
+<figcaption><span class="quote-card-who"><strong>{{ include.name }}</strong>{% if include.handle %} <span>{{ include.handle }}</span>{% endif %}</span><span class="quote-card-meta">{{ include.date }} · <a href="{{ include.url }}" target="_blank" rel="noopener noreferrer">{{ include.source }} <span aria-hidden="true">↗</span></a></span></figcaption>
+</figure>
